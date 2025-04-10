@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WebQuery 🧠🌐
 
-## Getting Started
+**Turn any webpage into smart answers.**\
+WebQuery lets users capture a screenshot of any webpage and ask questions based on the content using AI-powered insights.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🌍 **URL Screenshot**: Enter any URL to capture a screenshot of the page.
+- 💬 **Ask Questions**: Ask contextual questions about the content using AI.
+- 📥 **Download**: Save the screenshot for reference.
+- 📋 **Copy Answers**: Easily copy AI-generated responses.
+- ⚡ **Animated UI**: Smooth transitions with Framer Motion.
+- 🎨 **Modern UI**: Styled with Tailwind CSS and Google Fonts (Poppins).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js** (App Router)
+- **Framer Motion** (Animations)
+- **Tailwind CSS** (Styling)
+- **Google Fonts** (Typography - Poppins)
+- **AI API** (like Gemini)
+- **Screenshot API** (can be Puppeteer, etc.)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📸 Demo
 
-## Learn More
+[https://user-site-or-vercel-link.com](https://user-site-or-vercel-link.com)
 
-To learn more about Next.js, take a look at the following resources:
+## ⚙️ Setup Instructions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/devlpr-nitish/webquery.git
+   cd webquery
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Environment Variables**
+   Create a `.env.local` file with the following:
+   ```env
+   SCREENSHOT_API_KEY=your_screenshot_api_key
+   GEMINI_API_KEY=your_gemini_api_key
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the Development Server**
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. **Build for Production**
+   ```bash
+   npm run build
+   npm start
+   ```
+
+## 🌱 Future Enhancements
+
+- 🧾 OCR support for direct text extraction from screenshots
+- 🗂️ History management for previous queries
+- 🌙 Light/Dark theme toggle
+- 🔐 User authentication and saved sessions
+
+## 🤝 Contributing
+
+Contributions are welcome! Fork the repo and submit a PR 🙌
+
+---
+
+Made with ❤️ by [Nitish](https://github.com/devlpr-nitish)
+
