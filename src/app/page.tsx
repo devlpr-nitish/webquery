@@ -33,7 +33,7 @@ export default function Home() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.6 }}
                 >
-                    WebQuery allows you to capture a webpage screenshot and ask questions related to its content using AI-powered insights.
+                    WebQuery allows you to capture a webpage screenshot and ask questions related to its content using AI-powered insights just after giving the url of that page.
                 </motion.p>
                 <motion.div
                     initial={{ scale: 0.9, opacity: 0 }}

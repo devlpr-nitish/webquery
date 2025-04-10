@@ -205,6 +205,7 @@ export default function Convert() {
         >
           <div className='flex justify-between'>
             <Button
+              disabled={loadingImage}
               onClick={getScreenshot}
               className="px-4 py-2 rounded-sm shadow cursor-pointer hover:scale-105 transition border border-blue-600 hover:text-blue-400"
             >
@@ -241,6 +242,7 @@ export default function Convert() {
               className="py-2 px-4 border border-blue-600 outline-0 rounded-md w-3/4 text-gray-300"
             />
             <Button
+              disabled={loadingAnswer}
               onClick={sendToGemini}
               className="text-white px-4 py-2 rounded-sm cursor-pointer hover:scale-105 transition border border-blue-600 hover:text-blue-400"
             >
