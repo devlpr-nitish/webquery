@@ -14,19 +14,16 @@ export async function POST(req: Request) {
 
   try {
     const browser = await puppeteer.launch({
-      //@ts-ignore
-      headless: 'new',
+      headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle2' });
 
-    const screenshotBuffer = await page.screenshot({ fullPage: true });
-    
+    const screenshotBuffer = await page.screenshot({ fullPage: true }) as Buffer;   
 
     await browser.close();
-    //@ts-ignore
-    const base64Image = `data:image/png;base64,${screenshotBuffer.toString('base64')}`;
+    const base64Image = `data:image/png;base64,${(screenshotBuffer as Buffer).toString('base64')}`;
 
     return new Response(JSON.stringify({res_image: base64Image }), {
       status: 200,

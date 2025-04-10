@@ -14,8 +14,7 @@ export async function POST(req: Request) {
 
     try {
         const browser = await puppeteer.launch({
-            //@ts-ignore
-            headless: 'new',
+            headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
         });
         const page = await browser.newPage();
