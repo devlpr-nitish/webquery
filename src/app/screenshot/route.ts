@@ -1,5 +1,5 @@
-
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
+import chromium from '@sparticuz/chromium';
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -14,8 +14,9 @@ export async function POST(req: Request) {
 
   try {
     const browser = await puppeteer.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      args: chromium.args,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
     });
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle2' });
